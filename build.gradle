@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group 'com.raminzare.newhttp'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.11.2'
+}
+
+plugins.withType(JavaPlugin).configureEach {
+    java {
+        modularity.inferModulePath = true
+    }
+}
